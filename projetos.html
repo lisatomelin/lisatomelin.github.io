@@ -1,62 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre mim</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
 
-<body>
+  <body>
     <header class="cabecalho">
-        <nav class="cabecalho__menu">
-          <h2 class="cabecalho__menu__link_destaque"> Portifolio</h2>
-          <a class="cabecalho__menu__link" href="index.html">Home</a>
-          <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
-          <a class="cabecalho__menu__link" href="projetos.html">Projetos</a>
-          
-        </nav>
+      <nav class="cabecalho__menu">
+        <h2 class="cabecalho__menu__link_destaque">Portifolio</h2>
+        <a class="cabecalho__menu__link" href="index.html">Home</a>
+        <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+        <a class="cabecalho__menu__link" href="projetos.html">Projetos</a>
+      </nav>
     </header>
 
     <main class="apresentacao">
-        <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Projetos</h1>
-            <div class="apresentacao__conteudo__projetos">
+      <section class="apresentacao__conteudo">
+        <h1 class="apresentacao__conteudo__titulo">Projetos</h1>
+        <div class="apresentacao__conteudo__projetos">
+          <img src="./assets/eagenda.png" />
+          <h3>e-Agenda Médica</h3>
+          <p>
+            Projeto criado com o intuito de suprir as dificuldades de uma rotina
+            de atendimentos médicos, onde é possivel agendar de forma simples
+            consultas e cirurgias e visualiza-las facilmente além de impedor que
+            os compromissos sejam agendados nos mesmos horários sem conflito de
+            agenda .
+          </p>
+          <div class="apresentacao__links">
+            <h2 class="apresentacao__links__subtitulo"></h2>
+            <a
+              class="apresentacao__links__navegacao"
+              href="https://github.com/lisatomelin/eAgenda-Medica"
+              target="_blank"
+              >Ver Projeto</a
+            >
+          </div>
+        </div>
 
-              
-                <img src="./assets/eagenda.png">
-                <h3>e-Agenda Médica</h3>
-                <p>Projeto criado com o intuito de suprir as dificuldades de uma rotina de atendimentos médicos, onde é possivel agendar de forma simples
-                  consultas e cirurgias e visualiza-las facilmente além de impedor que os compromissos sejam agendados nos mesmos horários sem conflito de agenda .</p>
-                <a href="https://github.com/lisatomelin/eAgenda-Medica" target="_blank">Ver Projeto</a>
-              </div>
-          
-              <div class="apresentacao__conteudo__projetos">
-                <img src="./assets/filmes.png">
-                <h3>APMDB Cinema 2.0</h3>
-                <p>Utilizando a API do TMDB criei um site que mostra os lançamentos em filmes, pode assistir os trailers e conferir sinopeses, além de ser possivel favorita-los .</p>
-                <a href="https://github.com/lisatomelin/Cinema2.0" target="_blank">Ver Projeto</a>
-              </div>
-          
-              <div class="apresentacao__conteudo__projetos">
-                <img src="./assets/locadora.png">
-                <h3>Locadora de Veículos</h3>
-                <p>Projeto feito em linguagem C# com o objetivo de simular o cotidiano de uma locadora de veículos onde permitimos cadastrar veículos e seus condutores. 
-                  As instefaces de interação do usuario foram feitas em windows forms .NET idealizados para que o usuário consiga utilizar o sistema de forma intuitiva e clara</p>
-                <a href="https://github.com/lisatomelin/LocadoraDeVeiculos" target="_blank">Ver Projeto</a>
-              </div>
-          
-            </div> 
-        </section>
-        
+        <div class="apresentacao__conteudo__projetos">
+          <img src="./assets/filmes.png" />
+          <h3>APMDB Cinema 2.0</h3>
+          <p>
+            Utilizando a API do TMDB criei um site que mostra os lançamentos em
+            filmes, pode assistir os trailers e conferir sinopeses, além de ser
+            possivel favorita-los .
+          </p>
+          <div class="apresentacao__links">
+            <h2 class="apresentacao__links__subtitulo"></h2>
+            <a
+              class="apresentacao__links__navegacao"
+              href="https://github.com/lisatomelin/Cinema2.0"
+              target="_blank"
+              >Ver Projeto</a
+            >
+          </div>
+
+          <div class="apresentacao__conteudo__projetos">
+            <img src="./assets/locadora.png" />
+            <h3>Locadora de Veículos</h3>
+            <p>
+              Projeto feito em linguagem C# com o objetivo de simular o
+              cotidiano de uma locadora de veículos onde permitimos cadastrar
+              veículos e seus condutores. As instefaces de interação do usuario
+              foram feitas em windows forms .NET idealizados para que o usuário
+              consiga utilizar o sistema de forma intuitiva e clara
+            </p>
+            <div class="apresentacao__links">
+              <h2 class="apresentacao__links__subtitulo"></h2>
+              <a
+                class="apresentacao__links__navegacao"
+                href="https://github.com/lisatomelin/LocadoraDeVeiculos"
+                target="_blank"
+                >Ver Projeto</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-   <footer class="rodape">      
-        <p>Gostou do meu trabalho? Entre em contato</p> 
-    
+    <footer class="rodape">
+      <p>Gostou do meu trabalho? Entre em contato</p>
     </footer>
-</body>
-
+  </body>
 </html>
