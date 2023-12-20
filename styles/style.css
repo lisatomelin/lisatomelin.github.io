@@ -108,6 +108,13 @@ body {
   text-align: center;
 }
 
+.apresentacao__conteudo__projetos {
+  font-size: 1.5rem;
+  font-family: var(--fonte-secundaria);
+  align-items: center;
+  text-align: center;
+}
+
 .apresentacao__conteudo__sobremim.span {
   font-size: 1.5rem;
   font-family: var(--fonte-secundaria);
@@ -198,12 +205,26 @@ body {
     font-size: 2.25rem;
     font-family: var(--fonte-primaria);
     padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
   }
 
   .apresentacao__conteudo__sobremim {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
     align-items: center;
+  }
+
+  .apresentacao__conteudo__projetos {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    align-items: center;
+  }
+
+  .apresentacao__conteudo__projetos img{
+    width: 70%;
+    height: auto;
+    gap: 50px;
   }
 
   .rodape {
