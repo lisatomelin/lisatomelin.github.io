@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-ux-design',
-  templateUrl: './ux-design.component.html',
-  styleUrls: ['./ux-design.component.scss']
+    selector: 'app-ux-design',
+    templateUrl: './ux-design.component.html',
+    styleUrls: ['./ux-design.component.scss'],
+    standalone: false
 })
 export class UxDesignComponent {
 
