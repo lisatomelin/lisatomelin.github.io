@@ -1,0 +1,36 @@
+.mat-toolbar {
+  background: #f2ebfe;
+  border-bottom: 2px solid #b442e5;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.mat-toolbar span {
+
+  color: #b442e5;
+  -webkit-text-stroke: 1px #b442e5;
+  border-width: 10px;
+  margin-left: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.logo-fluid{
+  width: 100px;
+  height: 100px;
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+

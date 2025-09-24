@@ -1,0 +1,81 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
+
+.card-title .mat-mdc-tab .mdc-tab--active .mdc-tab__text-label {
+    color: #b442e5;
+}
+
+.mat-mdc-tab.mdc-tab--active:hover .mdc-tab__text-label {
+    color: #b442e5;
+}
+.mat-mdc-tab .mdc-tab__text-label {
+    color: #b442e5;}
+.text-primary {
+    --bs-text-opacity: 1;
+    color: #690C8B !important;
+}
+
+.mat-mdc-tab-group, .mat-mdc-tab-nav-bar {
+    --mdc-tab-indicator-active-indicator-color: #b442e5;}
+
+.titulo-ux {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #b442e5;
+    -webkit-text-stroke: 1px #b442e5;
+  }
+
+  .tab-roxa ::ng-deep .mat-tab-label {
+  color: #b442e5 !important;}
+
+.modulo-ux, .modulo-ui {
+  background-color: #f2ebfe;
+
+
+}
+
+  .card {
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid #b442e5;
+    background-color: #f2f2f2;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px #b442e5;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      color: #666;
+    }
+  }
+
+  .icone-wrapper {
+    font-size: 2.5rem;
+    color: #b442e5;
+  }
+
+  .icone-ux {
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover .icone-ux {
+    transform: scale(1.2);
+  }
+
+  .mdc-tab__text-label{
+    color: #b442e5;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .mat-tab{
+    color: #b442e5;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
