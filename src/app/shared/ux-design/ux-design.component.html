@@ -1,44 +1,74 @@
 <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
-<mat-tab-group class=".mat-mdc-tab.mdc-tab--active .mdc-tab__text-label mt-5 tab-roxa">
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+/>
+
+<mat-tab-group class="mt-5 tab-roxa">
+
+  <!-- TAB 1: UX DESIGN -->
   <mat-tab label="Habilidade em UX Design">
     <section class="modulo-ux py-5">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4" *ngFor="let habilidade of habilidadesUX">
-            <div class="card h-100 shadow-sm border-0 text-center p-3">
-              <div class="icone-wrapper mb-3">
-                <i class="{{ habilidade.icone }} icone-ux"></i>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title fw-semibold text-primary">{{ habilidade.titulo }}</h5>
-                <p class="card-text text-muted">{{ habilidade.descricao }}</p>
-              </div>
+      <div class="container position-relative">
+
+        <!-- Botão esquerda -->
+        <button class="arrow-btn left" (click)="scrollCarousel('uxCarousel', -1)">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <!-- Carrossel -->
+        <div #uxCarousel class="cards-carousel">
+          <div class="card h-100 shadow-sm border-0 text-center p-3"
+               *ngFor="let habilidade of habilidadesUX">
+            <div class="icone-wrapper mb-3">
+              <i class="{{ habilidade.icone }} icone-ux"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-semibold text-primary">{{ habilidade.titulo }}</h5>
+              <p class="card-text text-muted">{{ habilidade.descricao }}</p>
             </div>
           </div>
         </div>
+
+        <!-- Botão direita -->
+        <button class="arrow-btn right" (click)="scrollCarousel('uxCarousel', 1)">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+
       </div>
     </section>
   </mat-tab>
 
+  <!-- TAB 2: UI DESIGN -->
   <mat-tab label="Habilidades em UI Design">
     <section class="modulo-ui py-5">
-      <div class="container text-center">
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4" *ngFor="let habilidade of habilidadesUI">
-            <div class="card h-100 shadow-sm border-0 text-center p-3">
-              <div class="icone-wrapper mb-3">
-                <i class="{{ habilidade.icone }} icone-ux"></i>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title fw-semibold text-primary">{{ habilidade.titulo }}</h5>
-                <p class="card-text text-muted">{{ habilidade.descricao }}</p>
-              </div>
+      <div class="container position-relative">
+
+        <!-- Botão esquerda -->
+        <button class="arrow-btn left" (click)="scrollCarousel('uiCarousel', -1)">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <!-- Carrossel -->
+        <div #uiCarousel class="cards-carousel">
+          <div class="card h-100 shadow-sm border-0 text-center p-3"
+               *ngFor="let habilidade of habilidadesUI">
+            <div class="icone-wrapper mb-3">
+              <i class="{{ habilidade.icone }} icone-ux"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-semibold text-primary">{{ habilidade.titulo }}</h5>
+              <p class="card-text text-muted">{{ habilidade.descricao }}</p>
             </div>
           </div>
         </div>
+
+        <!-- Botão direita -->
+        <button class="arrow-btn right" (click)="scrollCarousel('uiCarousel', 1)">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+
       </div>
     </section>
   </mat-tab>
+
 </mat-tab-group>
