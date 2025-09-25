@@ -13,7 +13,7 @@ export class ProjectsComponent {
     {
       nome: 'e-Agenda Médica',
       descricao: 'Projeto criado para facilitar o agendamento de consultas e cirurgias.',
-      imagem: './assets/eagenda.png',
+      imagem: './assets/eAgenda.png',
       link: 'https://github.com/lisatomelin/eAgenda-Medica'
     },
     {
