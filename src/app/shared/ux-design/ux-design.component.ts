@@ -42,19 +42,19 @@ export class UxDesignComponent {
     },
     {
       titulo: 'Acessibilidade',
-      descricao: 'Criação de interfaces inclusivas e acessíveis.           ',
+      descricao: 'Projetando interfaces que promovem acessibilidade e inclusão para todos.',
       icone: 'bi bi-universal-access-circle',
     },
   ];
   habilidadesUI = [
     {
       titulo: 'Design Visual',
-      descricao: 'Criação de interfaces atraentes e funcionais.',
+      descricao: 'Design de interfaces que aliam estética e funcionalidade.',
       icone: 'bi bi-palette',
     },
     {
       titulo: 'Tipografia',
-      descricao: 'Seleção de fontes que melhorem a legibilidade.',
+      descricao: 'Definição tipográfica focada na melhor leitura e compreensão.',
       icone: 'bi bi-fonts',
     },
     {
