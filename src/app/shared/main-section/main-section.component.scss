@@ -74,4 +74,11 @@ span {
       }
     }
   }
+
+  @media (max-width: 576px) {
+  .perfil-foto img {
+    max-width: 150px;
+  }
+}
+
 }
