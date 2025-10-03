@@ -1,84 +1,194 @@
-.container{
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+
+/* === Tabs e cores === */
+.mat-mdc-tab-group,
+.mat-mdc-tab-nav-bar {
+  --mdc-tab-indicator-active-indicator-color: #b442e5; /* indicador roxo */
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+  color: #7e3b9f !important; /* roxo claro inativo */
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.mat-mdc-tab:hover .mdc-tab__text-label {
+  color: #a754d6 !important; /* roxo mais vivo no hover */
+}
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: #b442e5 !important; /* roxo principal ativo */
+  font-weight: 700;
+}
+
+/* foco acessível */
+.mat-mdc-tab.mdc-tab--active:focus .mdc-tab__text-label {
+  text-shadow: 0 0 6px rgba(180, 66, 229, 0.7);
+}
+
+/* === Textos primários === */
+.text-primary {
+  color: #690c8b !important;
+}
+
+/* === Seções === */
+.modulo-ux,
+.modulo-ui {
   background-color: #f2ebfe;
 }
 
-.mat-h1, .mat-headline-5, .mat-typography .mat-h1, .mat-typography .mat-headline-5, .mat-typography h1 {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 32px;
-    font-family: Roboto, sans-serif;
-    letter-spacing: normal;
-    margin: 0 0 16px;
-    color: #690C8B;
-    background-color: #f2ebfe;}
-
-.perfil-foto {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-
-  .custom-title {
-    color:#b442e5;
-  }
-
-background-color: #f2ebfe;
-
-.image-container {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f2ebfe;
-
-
+/* === Cards Carousel === */
+.cards-carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  position: relative;
 }
 
-span {
-  font-weight: bold;
-  color: #b442e5 !important;
+.cards-carousel::-webkit-scrollbar {
+  display: none;
 }
 
-
-  .text-lilas {
-  color: #b442e5 !important; // Escolha o tom de lilás que preferir
+.cards-carousel .card {
+  flex: 0 0 85%;
+  min-width: 260px;
+  max-width: 320px;
+  scroll-snap-align: center;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(180, 66, 229, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.7s ease both;
 }
 
-  .habilidades-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.2rem;
-    padding: 0.5rem;
-
-    .habilidade-img {
-      width: 50px;
-      height: auto;
-      transition: transform 0.3s ease, filter 0.3s ease;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-
-      &:hover {
-        transform: scale(1.2);
-        filter: drop-shadow(0 4px 8px #b442e5(66, 195, 229, 0.4));
-        cursor: pointer;
-      }
-    }
-  }
+.cards-carousel .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(180, 66, 229, 0.3);
 }
 
-// Responsividade extra para telas menores
+/* === Ícone do card === */
+.icone-wrapper {
+  font-size: 2.8rem;
+  color: #b442e5;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .icone-ux {
+  transform: scale(1.2);
+}
+
+/* === Botões de navegação === */
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.2s ease, opacity 0.4s ease;
+  opacity: 1;
+  pointer-events: all;
+  z-index: 10;
+  animation: fadeIn 0.6s ease both;
+}
+
+.arrow-btn i {
+  font-size: 1.6rem;
+  color: #b442e5;
+}
+
+.arrow-btn:hover {
+  background: #b442e5;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.arrow-btn:hover i {
+  color: #fff;
+}
+
+.arrow-btn.left {
+  left: -25px;
+}
+
+.arrow-btn.right {
+  right: -25px;
+}
+
+/* === Responsividade === */
+
+/* 📱 Mobile */
 @media (max-width: 576px) {
-  .image-container {
-    .habilidades-grid {
-      gap: 1rem;
-
-      .habilidade-img {
-        width: 45px;
-      }
-    }
+  .cards-carousel .card {
+    flex: 0 0 85%;
   }
 
-  @media (max-width: 576px) {
-  .perfil-foto img {
-    max-width: 150px;
+  .arrow-btn {
+    width: 38px;
+    height: 38px;
+    background: rgba(180, 66, 229, 0.9);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .arrow-btn i {
+    font-size: 1.3rem;
+    color: #fff;
+  }
+
+  .arrow-btn.left {
+    left: 12px;
+  }
+
+  .arrow-btn.right {
+    right: 12px;
   }
 }
 
+/* 📱 Tablet */
+@media (min-width: 768px) {
+  .cards-carousel .card {
+    flex: 0 0 45%;
+  }
+}
+
+/* 💻 Desktop - mostra 3 cards */
+@media (min-width: 992px) {
+  .cards-carousel .card {
+    flex: 0 0 30%;
+  }
+}
+
+/* === Animações personalizadas === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
