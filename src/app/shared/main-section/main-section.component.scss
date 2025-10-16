@@ -1,5 +1,10 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
 
+.img-fluid {
+    max-width: 70%;
+    height: auto;
+}
+
 /* === Tabs e cores === */
 .mat-mdc-tab-group,
 .mat-mdc-tab-nav-bar {
